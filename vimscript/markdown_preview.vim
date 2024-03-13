@@ -1,11 +1,11 @@
-function OpenMarkdownPreview (url)
-  execute "silent ! librewolf --new-window " . a:url
-endfunction
-let g:mkdp_browserfunc = 'OpenMarkdownPreview'
+"function OpenMarkdownPreview (url)
+"   execute "silent ! librewolf --new-window " . a:url
+"endfunction
+"let g:mkdp_browserfunc = 'OpenMarkdownPreview'
 
 " set to 1, nvim will open the preview window after entering the Markdown buffer
 " default: 0
-let g:mkdp_auto_start = 1
+let g:mkdp_auto_start = 1 
 
 " set to 1, the nvim will auto close current preview window when changing
 " from Markdown buffer to another buffer
@@ -43,19 +43,19 @@ let g:mkdp_browser = ''
 
 " set to 1, echo preview page URL in command line when opening preview page
 " default is 0
-let g:mkdp_echo_preview_url = 0
+let g:mkdp_echo_preview_url = 1
 
 
 " use a custom Markdown style. Must be an absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
-let g:mkdp_markdown_css = ''
+let g:mkdp_markdown_css = expand('~/.config/nvim/mkdpreview/custom.css')
 
 " use a custom highlight style. Must be an absolute path
 " like '/Users/username/highlight.css' or expand('~/highlight.css')
-let g:mkdp_highlight_css = expand('~/.config/nvim/mkdpreview/custom.css')
+let g:mkdp_highlight_css = ''
 
 " use a custom port to start server or empty for random
-let g:mkdp_port = '8425'
+let g:mkdp_port = ''
 
 " preview page title
 " ${name} will be replace with the file name
