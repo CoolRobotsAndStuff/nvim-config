@@ -1,8 +1,6 @@
 function OpenMarkdownPreview (url)
-    execute "silent ! nohup librewolf -new-instance -P mkd &" 
-    execute "silent ! i3 split h && librewolf -P mkd --new-tab " . a:url . " && sleep 1 && i3 fullscreen toggle"
-
-  endfunction
+    execute "silent ! nohup librewolf -new-instance -P mkd -kiosk -new-tab " . a:url . " & i3 split h && sleep 3 && i3 fullscreen toggle" 
+endfunction
 let g:mkdp_browserfunc = 'OpenMarkdownPreview'
 
 " set to 1, nvim will open the preview window after entering the Markdown buffer
@@ -41,7 +39,7 @@ let g:mkdp_open_ip = ''
 " valid: `/path/with\ space/xxx`
 " invalid: `/path/with\\ space/xxx`
 " default: ''
-let g:mkdp_browser = 'librewolf -P mkd -new-instance -url'
+let g:mkdp_browser = 'librewolf'
 
 " set to 1, echo preview page URL in command line when opening preview page
 " default is 0
@@ -54,10 +52,10 @@ let g:mkdp_markdown_css = expand('~/.config/nvim/lua/plugins/mkdpreview/custom.c
 
 " use a custom highlight style. Must be an absolute path
 " like '/Users/username/highlight.css' or expand('~/highlight.css')
-let g:mkdp_highlight_css = ''
+let g:mkdp_highlight_css = expand('~/.config/nvim/lua/plugins/mkdpreview/custom.css')
 
 " use a custom port to start server or empty for random
-let g:mkdp_port = '8079'
+let g:mkdp_port = ''
 
 " preview page title
 " ${name} will be replace with the file name
@@ -72,7 +70,7 @@ let g:mkdp_filetypes = ['markdown']
 
 " set default theme (dark or light)
 " By default the theme is defined according to the preferences of the system
-let g:mkdp_theme = 'dark'
+let g:mkdp_theme = 'light'
 
 " combine preview window
 " default: 0

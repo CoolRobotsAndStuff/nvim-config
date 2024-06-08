@@ -1,7 +1,8 @@
 #page-ctn{
   padding:0;
   margin:0;
-  max-width:100%; !important}
+  max-width:100% !important;
+}
 
 /*
  * github like style
@@ -14,14 +15,14 @@
     --color-text-link: #4078c0;
     --color-bg-primary: #fff;
     --color-bg-secondary: #fafbfc;
-    --color-bg-tertiary: #f8f8f8;
+    --color-bg-tertiary: #dadada;
     --color-border-primary: #ddd;
     --color-border-secondary: #eaecef;
     --color-border-tertiary: #d1d5da;
     --color-kbd-foreground: #444d56;
     --color-markdown-blockquote-border: #dfe2e5;
-    --color-markdown-table-border: #dfe2e5;
-    --color-markdown-table-tr-border: #c6cbd1;
+    --color-markdown-table-border: gray; /*#dfe2e5;*/
+    --color-markdown-table-tr-border: gray; /*#c6cbd1;*/
     --color-markdown-code-bg: #1b1f230d;
 }
 [data-theme="dark"] {

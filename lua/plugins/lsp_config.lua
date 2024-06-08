@@ -1,4 +1,3 @@
-
 return {
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
@@ -103,7 +102,6 @@ return {
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -113,6 +111,27 @@ return {
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
+        pylsp = {
+              settings = {
+                configurationSources = {"flake8"},
+                formatCommand = {"black"},
+                pylsp = {
+                  plugins = {
+                    -- jedi_completion = {fuzzy = true},
+                    -- jedi_completion = {eager=true},
+                    jedi_completion = {
+                      include_params = true,
+                    },
+                    jedi_signature_help = {enabled = true},
+                    -- pylint = {args = {'--ignore=E501,E231', '-'}, enabled=true, debounce=200},
+                    pycodestyle={
+                      enabled=false,
+                      ignore={'E501', 'E231'},
+                      maxLineLength=120},
+                  }
+                }
+              }
+        },
 
         lua_ls = {
           settings = {
@@ -149,7 +168,9 @@ return {
             -- server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
             capabilities.textDocument.completion.completionItem.snippetSupport = false
 
+
             require('lspconfig')[server_name].setup(server)
+
           end,
         },
       }

@@ -1,19 +1,28 @@
 vim.keymap.set("n", "ññ", "<cmd>nohlsearch<CR><Esc>")
 vim.keymap.set("i", "ññ", "<Esc>")
 vim.keymap.set("v", "ññ", "<Esc>")
+vim.keymap.set("t", "ññ", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
+vim.keymap.set("n", "ñÑ", "<cmd>nohlsearch<CR><Esc>")
+vim.keymap.set("i", "ñÑ", "<Esc>")
+vim.keymap.set("v", "ñÑ", "<Esc>")
+vim.keymap.set("t", "ñÑ", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
+vim.keymap.set("n", "Ññ", "<cmd>nohlsearch<CR><Esc>")
+vim.keymap.set("i", "Ññ", "<Esc>")
+vim.keymap.set("v", "Ññ", "<Esc>")
+vim.keymap.set("t", "Ññ", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
+vim.keymap.set("n", "ÑÑ", "<cmd>nohlsearch<CR><Esc>")
+vim.keymap.set("i", "ÑÑ", "<Esc>")
+vim.keymap.set("v", "ÑÑ", "<Esc>")
+vim.keymap.set("t", "ÑÑ", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
--- is not what someone will guess without a bit more experience.
---
--- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
--- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set("t", "ññ", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- better up/down
 vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
