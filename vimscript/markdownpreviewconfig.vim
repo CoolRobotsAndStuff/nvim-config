@@ -1,11 +1,11 @@
 function OpenMarkdownPreview (url)
     execute "silent ! nohup librewolf -new-instance -P mkd -kiosk -new-tab " . a:url . " & i3 split h && sleep 3 && i3 fullscreen toggle" 
 endfunction
-let g:mkdp_browserfunc = 'OpenMarkdownPreview'
+let g:mkdp_browserfunc = '' "'OpenMarkdownPreview'
 
 " set to 1, nvim will open the preview window after entering the Markdown buffer
 " default: 0
-let g:mkdp_auto_start = 1 
+let g:mkdp_auto_start = 0 
 
 " set to 1, the nvim will auto close current preview window when changing
 " from Markdown buffer to another buffer

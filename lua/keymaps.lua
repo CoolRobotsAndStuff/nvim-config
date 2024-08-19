@@ -2,21 +2,25 @@ vim.keymap.set("n", "ññ", "<cmd>nohlsearch<CR><Esc>")
 vim.keymap.set("i", "ññ", "<Esc>")
 vim.keymap.set("v", "ññ", "<Esc>")
 vim.keymap.set("t", "ññ", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("c", "ññ", "<C-c>")
 
 vim.keymap.set("n", "ñÑ", "<cmd>nohlsearch<CR><Esc>")
 vim.keymap.set("i", "ñÑ", "<Esc>")
 vim.keymap.set("v", "ñÑ", "<Esc>")
 vim.keymap.set("t", "ñÑ", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("c", "ñÑ", "<C-c>")
 
 vim.keymap.set("n", "Ññ", "<cmd>nohlsearch<CR><Esc>")
 vim.keymap.set("i", "Ññ", "<Esc>")
 vim.keymap.set("v", "Ññ", "<Esc>")
 vim.keymap.set("t", "Ññ", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("c", "Ññ", "<C-c>")
 
 vim.keymap.set("n", "ÑÑ", "<cmd>nohlsearch<CR><Esc>")
 vim.keymap.set("i", "ÑÑ", "<Esc>")
 vim.keymap.set("v", "ÑÑ", "<Esc>")
 vim.keymap.set("t", "ÑÑ", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("c", "ÑÑ", "<C-c>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })

@@ -112,8 +112,6 @@
 }
 .markdown-body p,
 .markdown-body blockquote,
-.markdown-body ul,
-.markdown-body ol,
 .markdown-body dl,
 .markdown-body table,
 .markdown-body pre {
@@ -121,6 +119,13 @@
     margin-bottom: 16px;
     break-inside: avoid;
 }
+
+.markdown-body ul,
+.markdown-body ol {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
 .markdown-body p,
 .markdown-body blockquote {
   text-indent: 50px;
